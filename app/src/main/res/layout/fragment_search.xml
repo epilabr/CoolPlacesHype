@@ -1,0 +1,126 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/search_text"
+            android:hint="@string/search_text"
+            android:focusable="true"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="#ddd"
+            android:layout_height="49dp"
+            android:textColorLink="@android:color/white"
+            android:textColor="@android:color/white"
+            android:textCursorDrawable="@null"
+            android:textColorHighlight="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:scrollbarThumbVertical="@android:color/white"
+            android:scrollbarThumbHorizontal="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/distance_tv"
+            android:hint="@string/distance_tv"
+            android:gravity="center"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            tools:ignore="UnusedAttribute">
+
+            <SeekBar
+                android:layout_width="0dp"
+                android:id="@+id/distance_seek_bar"
+                android:layout_weight="0.87"
+                android:layout_gravity="center"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:max="3000"
+                android:progress="@integer/mr_controller_volume_group_list_animation_duration_ms"
+                android:layout_margin="0dp"
+                android:background="#ddd"
+                android:fadingEdge="horizontal|vertical"
+                android:layout_height="49dp"
+                android:indeterminateDrawable="@android:color/white"
+                android:thumb="@drawable/thumb1" />
+
+            <CheckBox
+                android:layout_width="40dp"
+                android:id="@+id/search_check_Box"
+                android:elevation="0dp"
+                tools:ignore="UnusedAttribute"
+                android:background="#ddd"
+                android:layout_height="49dp"
+                android:buttonTint="@android:color/white" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/search_button"
+            android:textSize="12sp"
+            android:elevation="0dp"
+            android:gravity="center"
+            android:layout_width="120dp"
+            tools:ignore="UnusedAttribute"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button"
+            android:layout_height="62dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/search_fragment_list" />
+
+            <com.skyfishjy.library.RippleBackground
+                android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/content"
+               app:rb_color="#0099CC"
+               app:rb_radius="32dp"
+               app:rb_rippleAmount="8"
+               app:rb_duration="1500"
+               app:rb_scale="8">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/centerImage"
+                    android:src="@drawable/cellular_tower"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/imageView2"
+                    app:srcCompat="@drawable/arrow_right"
+                    android:layout_height="70dp"
+                    android:layout_width="70dp"
+                    android:alpha=".5"
+                    tools:ignore="ContentDescription" />
+            </com.skyfishjy.library.RippleBackground>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+

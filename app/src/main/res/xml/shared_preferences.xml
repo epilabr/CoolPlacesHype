@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <Preference
+        android:title="@string/delete"
+        android:key="preference"
+        android:textColor="@color/colorAccent" />
+    <Preference
+        android:title="@string/changeToMiles"
+        android:key="distancePreference"
+        android:textColor="@color/colorAccent" />
+
+</PreferenceScreen>

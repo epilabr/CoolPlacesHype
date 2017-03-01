@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/actionModeSplitBackground"
+    android:layoutDirection="ltr"
+    tools:targetApi="jelly_bean_mr1">
+
+    <ImageView
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        android:id="@+id/place_image"
+        android:background="#dddddd"
+        tools:ignore="ContentDescription,RtlHardcoded"
+        android:layout_height="110dp"
+        android:layout_width="110dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#ddd"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="2dp"
+        tools:ignore="InefficientWeight,RtlHardcoded"
+        android:gravity="center"
+        android:weightSum="3"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/place_name"
+            android:layout_margin="1dp"
+            tools:ignore="NestedWeights"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/place_address"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/place_distance"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+</LinearLayout>

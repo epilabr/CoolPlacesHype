@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.laptop.hype.FavoritesFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textAlignment="gravity"
+        android:text="@string/favorites"
+        android:gravity="center"
+        android:layout_height="75sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/arrow_lefty"
+            android:id="@+id/imageView"
+            android:elevation="1dp"
+            android:alpha=".5"
+            android:layout_marginTop="200dp"
+            tools:ignore="ContentDescription,UnusedAttribute" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/place_autocomplete_search_hint"
+            android:id="@+id/favorites_fragment_list" />
+    </FrameLayout>
+
+</LinearLayout>

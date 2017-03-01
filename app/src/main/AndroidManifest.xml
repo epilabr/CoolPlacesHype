@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cool.places.hype">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".MyPowerConnectionReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".SearchIntentService"
+            android:exported="false" />
+
+        <Fragment
+            android:name="com.example.laptop.hype.MyPreferenceFragment"
+            android:label="Preferences" />
+        <Fragment
+            android:name="com.example.laptop.hype.MyMapFragment"
+            android:label="MyMapFragment" />
+        <Fragment
+            android:name="com.example.laptop.hype.SearchFragment"
+            android:label="SearchFragment" />
+
+        <activity android:name=".AppPreferenceActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAaKYQN73SPTtqKl48BvvAipjtf0jtTNN0" />
+
+        <service
+            android:name=".AppLocationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".MyMapActivity" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="36af14a983d32b4dd0f06898157625f31f86fb18" />
+    </application>
+
+</manifest>
